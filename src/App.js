@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
 import { Line } from 'react-chartjs-2';
+import {CategoryScale} from 'chart.js'; 
+import Chart from 'chart.js/auto';
 
 function App() {
+  Chart.register(CategoryScale);
   const [xAxis, setXAxis] = useState([]);
   const [yAxis, setYAxis] = useState([]);
 
